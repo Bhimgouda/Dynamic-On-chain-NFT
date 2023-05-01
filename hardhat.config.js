@@ -1,4 +1,4 @@
-require("@nomiclabs/hardhat-waffle")
+// require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("@nomiclabs/hardhat-etherscan")
 require("dotenv").config()
@@ -32,6 +32,9 @@ module.exports = {
         },
         {
             version: "0.4.24",
+        },
+        {
+          version: "0.6.6",
         },
     ],
   },
