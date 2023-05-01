@@ -40,10 +40,13 @@ module.exports = {
   },
   networks:{
     hardhat: {
-      chainId: 31337
+      allowUnlimitedContractSize: true,
+      chainId: 31337,
+      blockGasLimit:500000000
     },
     localhost: {
-      chainId:31337
+      chainId:31337,
+      blockGasLimit:500000000
     },
     sepolia: {
       url: SEPOLIA_RPC_URL,

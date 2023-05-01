@@ -7,6 +7,7 @@ const networkConfig = {
     },
     11155111: {
         name: "sepolia",
+        btcUsdPriceFeed: "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43"
     },
 }
 
