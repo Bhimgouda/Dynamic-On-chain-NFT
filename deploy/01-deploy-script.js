@@ -9,8 +9,16 @@ module.exports = async ({getNamedAccounts, deployments}) => {
     const {deploy, log, get} = deployments
     const {deployer} = await getNamedAccounts()
     const {name: networkName} = network;
+    let btcUsdAggregatorAddress
 
     const happyWojakBase64URI = svgs.happyWojak
     const sadWojakBase64URI = svgs.sadWojak
+
+    if(developmentChains.includes(network.name)){
+       const BtcUsdAggregator = await deployments.get("MockV3Aggregator")
+       btcUsdAggregatorAddress = BtcUsdAggregator.address
+    }
+
+    
 
 }
