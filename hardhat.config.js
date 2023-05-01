@@ -1,4 +1,4 @@
-// require("@nomiclabs/hardhat-waffle")
+require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("@nomiclabs/hardhat-etherscan")
 require("dotenv").config()
@@ -53,7 +53,8 @@ module.exports = {
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
       saveDeployments: true,
       chainId: 11155111,
-      blockConfirmations: 5
+      blockConfirmations: 5,
+      blockGasLimit:500000000
     },
     mainnet:{
       url: MAINNET_RPC_URL,
