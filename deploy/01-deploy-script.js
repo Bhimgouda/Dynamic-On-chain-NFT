@@ -12,8 +12,8 @@ module.exports = async ({getNamedAccounts, deployments}) => {
 
     let btcUsdPriceFeedAddress
 
-    const happyWojakBase64URI = svgs.happyWojak
-    const sadWojakBase64URI = svgs.sadWojak
+    const happyWojakBase64URI = svgs.happy
+    const sadWojakBase64URI = svgs.sad
 
     if(developmentChains.includes(network.name)){
        const BtcUsdPriceFeed = await deployments.get("MockV3Aggregator")
@@ -32,7 +32,7 @@ module.exports = async ({getNamedAccounts, deployments}) => {
         args,
         log: true,
         waitConfirmations: network.config.blockConfirmations || 1,
-        gasLimit: 180000000
+        gasPrice: ethers.utils.parseUnits('50', 'gwei') 
     });
 
     // Verify the smart contract

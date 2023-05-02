@@ -7,8 +7,8 @@ module.exports = async ({ getNamedAccounts }) => {
     // Dynamic SVG  NFT
     const highValue = "28000"
     const dynamicSvgNft = await ethers.getContract("DynamicOnchainNft", deployer)
-    const dynamicSvgNftMintTx = await dynamicSvgNft.mintNft(highValue)
-    await dynamicSvgNftMintTx.wait(1)
+    // const dynamicSvgNftMintTx = await dynamicSvgNft.mintNft(highValue)
+    // await dynamicSvgNftMintTx.wait(1)
     console.log(`Dynamic SVG NFT index 0 tokenURI: ${await dynamicSvgNft.getLatestPriceOfAsset()}`)
 }
 module.exports.tags = ["all", "mint"]
